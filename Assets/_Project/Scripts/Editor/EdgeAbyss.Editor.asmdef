@@ -2,7 +2,8 @@
     "name": "EdgeAbyss.Editor",
     "rootNamespace": "EdgeAbyss.Editor",
     "references": [
-        "EdgeAbyss.Runtime"
+        "EdgeAbyss.Runtime",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"

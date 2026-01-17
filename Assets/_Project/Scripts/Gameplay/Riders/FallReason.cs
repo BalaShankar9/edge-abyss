@@ -5,6 +5,9 @@ namespace EdgeAbyss.Gameplay.Riders
     /// </summary>
     public enum FallReason
     {
+        /// <summary>Unknown or unspecified reason.</summary>
+        Unknown,
+        
         /// <summary>Stability dropped below threshold.</summary>
         LostBalance,
         

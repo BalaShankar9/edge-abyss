@@ -334,7 +334,7 @@ namespace EdgeAbyss.Gameplay.Score
             }
         }
 
-        private void HandleRiderFall(FallReason reason)
+        private void HandleRiderFell(FallReason reason)
         {
             // Apply fall penalty
             if (tuning != null)

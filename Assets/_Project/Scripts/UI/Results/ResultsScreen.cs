@@ -212,14 +212,7 @@ namespace EdgeAbyss.UI.Results
 
         private void LoadScene(string sceneName)
         {
-            if (SceneLoader.Instance != null)
-            {
-                SceneLoader.Instance.LoadScene(sceneName);
-            }
-            else
-            {
-                SceneManager.LoadScene(sceneName);
-            }
+            SceneManager.LoadScene(sceneName);
         }
 
         private Color GetGradeColor(string grade)

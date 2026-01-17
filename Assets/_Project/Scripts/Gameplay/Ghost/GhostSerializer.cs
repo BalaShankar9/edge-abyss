@@ -78,8 +78,8 @@ namespace EdgeAbyss.Gameplay.Ghost
                         lastRot = frame.rotation;
 
                         // Speed and lean
-                        writer.Write((Half)frame.speed);
-                        writer.Write((Half)frame.leanAngle);
+                        writer.Write(frame.speed);
+                        writer.Write(frame.leanAngle);
                     }
                 }
 
@@ -155,8 +155,8 @@ namespace EdgeAbyss.Gameplay.Ghost
                         Quaternion rotation = ReadQuaternionCompressed(reader);
 
                         // Speed and lean
-                        float speed = (float)reader.ReadHalf();
-                        float lean = (float)reader.ReadHalf();
+                        float speed = reader.ReadSingle();
+                        float lean = reader.ReadSingle();
 
                         data.frames.Add(new GhostFrame(time, position, rotation, speed, lean));
                     }
@@ -196,17 +196,17 @@ namespace EdgeAbyss.Gameplay.Ghost
 
         private static void WriteVector3Compressed(BinaryWriter writer, Vector3 v)
         {
-            // Use Half precision for reasonable accuracy with 50% size
-            writer.Write((Half)v.x);
-            writer.Write((Half)v.y);
-            writer.Write((Half)v.z);
+            // Use float for simplicity (can use half-precision in future with custom encoding)
+            writer.Write(v.x);
+            writer.Write(v.y);
+            writer.Write(v.z);
         }
 
         private static Vector3 ReadVector3Compressed(BinaryReader reader)
         {
-            float x = (float)reader.ReadHalf();
-            float y = (float)reader.ReadHalf();
-            float z = (float)reader.ReadHalf();
+            float x = reader.ReadSingle();
+            float y = reader.ReadSingle();
+            float z = reader.ReadSingle();
             return new Vector3(x, y, z);
         }
 
@@ -249,17 +249,17 @@ namespace EdgeAbyss.Gameplay.Ghost
                 default: a = q.x * sign; b = q.y * sign; c = q.z * sign; break;
             }
 
-            writer.Write((Half)a);
-            writer.Write((Half)b);
-            writer.Write((Half)c);
+            writer.Write(a);
+            writer.Write(b);
+            writer.Write(c);
         }
 
         private static Quaternion ReadQuaternionCompressed(BinaryReader reader)
         {
             int largestIndex = reader.ReadByte();
-            float a = (float)reader.ReadHalf();
-            float b = (float)reader.ReadHalf();
-            float c = (float)reader.ReadHalf();
+            float a = reader.ReadSingle();
+            float b = reader.ReadSingle();
+            float c = reader.ReadSingle();
 
             // Reconstruct largest component
             float largest = Mathf.Sqrt(1f - (a * a + b * b + c * c));

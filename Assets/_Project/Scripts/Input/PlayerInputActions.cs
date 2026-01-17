@@ -39,8 +39,7 @@ namespace EdgeAbyss.Input
             // Throttle: W key or Right Trigger (0 to 1)
             ThrottleAction = GameplayActionMap.AddAction(
                 "Throttle",
-                type: InputActionType.Value,
-                expectedControlType: "Axis"
+                type: InputActionType.Value
             );
             ThrottleAction.AddBinding("<Keyboard>/w");
             ThrottleAction.AddBinding("<Gamepad>/rightTrigger");
@@ -48,8 +47,7 @@ namespace EdgeAbyss.Input
             // Brake: S key or Left Trigger (0 to 1)
             BrakeAction = GameplayActionMap.AddAction(
                 "Brake",
-                type: InputActionType.Value,
-                expectedControlType: "Axis"
+                type: InputActionType.Value
             );
             BrakeAction.AddBinding("<Keyboard>/s");
             BrakeAction.AddBinding("<Gamepad>/leftTrigger");
@@ -57,8 +55,7 @@ namespace EdgeAbyss.Input
             // Steer: A/D keys or Left Stick X (-1 to 1)
             SteerAction = GameplayActionMap.AddAction(
                 "Steer",
-                type: InputActionType.Value,
-                expectedControlType: "Axis"
+                type: InputActionType.Value
             );
             // Composite for A/D keys
             SteerAction.AddCompositeBinding("1DAxis")

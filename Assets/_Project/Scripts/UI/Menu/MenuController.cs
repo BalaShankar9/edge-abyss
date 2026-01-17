@@ -252,15 +252,8 @@ namespace EdgeAbyss.UI.Menu
             PlayerPrefs.SetInt("SelectedMode", (int)SelectedMode);
             PlayerPrefs.Save();
 
-            // Use SceneLoader if available, otherwise direct load
-            if (SceneLoader.Instance != null)
-            {
-                SceneLoader.Instance.LoadScene(sceneName);
-            }
-            else
-            {
-                SceneManager.LoadScene(sceneName);
-            }
+            // Direct scene load
+            SceneManager.LoadScene(sceneName);
         }
 
         #endregion
