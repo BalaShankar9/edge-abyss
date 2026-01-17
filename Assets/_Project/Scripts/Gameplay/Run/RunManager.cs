@@ -34,7 +34,9 @@ namespace EdgeAbyss.Gameplay.Run
 
         [Header("Countdown")]
         [SerializeField] private float countdownDuration = 3f;
+        #pragma warning disable CS0414 // Planned for future use
         [SerializeField] private bool freezePlayerDuringCountdown = true;
+        #pragma warning restore CS0414
 
         [Header("Results")]
         [SerializeField] private string resultsSceneName = "Results";

@@ -3,7 +3,7 @@ using TMPro;
 using EdgeAbyss.Gameplay.Riders;
 using EdgeAbyss.Gameplay.Score;
 
-namespace EdgeAbyss.UI
+namespace EdgeAbyss.UI.HUD
 {
     /// <summary>
     /// Minimal HUD updater for the test track prototype.

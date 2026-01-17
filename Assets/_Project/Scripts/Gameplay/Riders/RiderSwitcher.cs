@@ -1,7 +1,7 @@
 using UnityEngine;
 using EdgeAbyss.Gameplay.Riders;
 
-namespace EdgeAbyss.Gameplay
+namespace EdgeAbyss.Gameplay.Riders
 {
     /// <summary>
     /// Allows switching between bike and horse with number keys.

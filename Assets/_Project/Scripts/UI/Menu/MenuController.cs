@@ -25,7 +25,9 @@ namespace EdgeAbyss.UI.Menu
 
         [Header("Scene Names")]
         [SerializeField] private string storyLevelScene = "Level_01";
+        #pragma warning disable CS0414 // Planned for future use
         [SerializeField] private string timeTrialScene = "Level_01_TimeTrial";
+        #pragma warning restore CS0414
         [SerializeField] private string endlessScene = "Endless";
 
         [Header("Settings")]

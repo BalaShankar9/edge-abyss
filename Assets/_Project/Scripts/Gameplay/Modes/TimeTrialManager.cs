@@ -52,7 +52,9 @@ namespace EdgeAbyss.Gameplay.Modes
         [SerializeField] private float countdownDuration = 3f;
 
         [Tooltip("Freeze rider during countdown.")]
+        #pragma warning disable CS0414 // Planned for future use
         [SerializeField] private bool freezeDuringCountdown = true;
+        #pragma warning restore CS0414
 
         [Header("Settings")]
         [Tooltip("Show ghost of previous best run.")]

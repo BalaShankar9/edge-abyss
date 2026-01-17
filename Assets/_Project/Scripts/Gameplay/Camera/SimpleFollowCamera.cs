@@ -1,7 +1,7 @@
 using UnityEngine;
 using EdgeAbyss.Gameplay.Riders;
 
-namespace EdgeAbyss.Gameplay
+namespace EdgeAbyss.Gameplay.Camera
 {
     /// <summary>
     /// Simple third-person follow camera for the test track.
