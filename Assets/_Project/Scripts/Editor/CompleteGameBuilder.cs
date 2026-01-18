@@ -10,7 +10,7 @@ using EdgeAbyss.Gameplay.Environment;
 using EdgeAbyss.Input;
 using EdgeAbyss.UI.HUD;
 using EdgeAbyss.UI.Menu;
-using EdgeAbyss.Debug;
+using EdgeAbyss.Debugging;
 using TMPro;
 using UnityEngine.UI;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Diagnostics;
 
-namespace EdgeAbyss.Debug
+namespace EdgeAbyss.Debugging
 {
     /// <summary>
     /// Wrapper around UnityEngine.Debug for project-wide logging.

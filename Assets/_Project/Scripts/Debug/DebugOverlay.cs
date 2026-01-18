@@ -4,7 +4,7 @@ using EdgeAbyss.Gameplay.Riders;
 using EdgeAbyss.Gameplay.Score;
 using TMPro;
 
-namespace EdgeAbyss.Debug
+namespace EdgeAbyss.Debugging
 {
     /// <summary>
     /// Runtime debug overlay toggled with F3 key.
