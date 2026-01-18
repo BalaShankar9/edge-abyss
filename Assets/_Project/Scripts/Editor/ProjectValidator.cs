@@ -6,6 +6,8 @@ using System.IO;
 using System.Text;
 using EdgeAbyss.Gameplay.Riders;
 using EdgeAbyss.Gameplay.Score;
+using EdgeAbyss.Gameplay.Camera;
+using EdgeAbyss.Gameplay.Environment;
 using EdgeAbyss.Audio;
 using EdgeAbyss.Input;
 
