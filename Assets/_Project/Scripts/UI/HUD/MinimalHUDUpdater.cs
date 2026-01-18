@@ -16,6 +16,7 @@ namespace EdgeAbyss.UI.HUD
         private TextMeshProUGUI _speedText;
         private TextMeshProUGUI _scoreText;
         private TextMeshProUGUI _streakText;
+        private TextMeshProUGUI _stabilityText;
         private TextMeshProUGUI _riderText;
 
         private ScoreManager _scoreManager;
@@ -26,6 +27,7 @@ namespace EdgeAbyss.UI.HUD
             _speedText = transform.Find("HUD Panel/SpeedText")?.GetComponent<TextMeshProUGUI>();
             _scoreText = transform.Find("HUD Panel/ScoreText")?.GetComponent<TextMeshProUGUI>();
             _streakText = transform.Find("HUD Panel/StreakText")?.GetComponent<TextMeshProUGUI>();
+            _stabilityText = transform.Find("HUD Panel/StabilityText")?.GetComponent<TextMeshProUGUI>();
             _riderText = transform.Find("HUD Panel/RiderText")?.GetComponent<TextMeshProUGUI>();
 
             // Find managers
@@ -66,6 +68,7 @@ namespace EdgeAbyss.UI.HUD
         private void Update()
         {
             UpdateSpeedDisplay();
+            UpdateStabilityDisplay();
             UpdateRiderDisplay();
         }
 
@@ -75,6 +78,26 @@ namespace EdgeAbyss.UI.HUD
 
             float speed = riderManager.ActiveRider.Speed;
             _speedText.text = $"Speed: {speed:F1} m/s";
+        }
+
+        private void UpdateStabilityDisplay()
+        {
+            if (_stabilityText == null || riderManager == null || riderManager.ActiveRider == null) return;
+
+            float stability = riderManager.ActiveRider.Stability;
+            int percentage = Mathf.RoundToInt(stability * 100f);
+            
+            // Color code stability
+            Color textColor = Color.white;
+            if (stability < 0.3f)
+                textColor = Color.red;
+            else if (stability < 0.6f)
+                textColor = Color.yellow;
+            else
+                textColor = Color.green;
+
+            _stabilityText.color = textColor;
+            _stabilityText.text = $"Stability: {percentage}%";
         }
 
         private void UpdateRiderDisplay()
