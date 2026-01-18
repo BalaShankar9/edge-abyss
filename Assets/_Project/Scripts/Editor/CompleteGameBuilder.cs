@@ -13,6 +13,7 @@ using EdgeAbyss.UI.Menu;
 using EdgeAbyss.Debugging;
 using TMPro;
 using UnityEngine.UI;
+using EdgeAbyss.Audio;
 
 namespace EdgeAbyss.Editor
 {
@@ -31,6 +32,7 @@ namespace EdgeAbyss.Editor
         private static ScoreTuning s_scoreTuning;
         private static CameraTuning s_cameraTuning;
         private static WindTuning s_windTuning;
+        private static AudioTuning s_audioTuning;
         private static GameObject s_bikePrefab;
         private static GameObject s_horsePrefab;
 
@@ -270,6 +272,22 @@ namespace EdgeAbyss.Editor
                 tuning.defaultZoneIntensity = 4f;
                 tuning.strongWindThreshold = 5f;
             });
+
+            s_audioTuning = CreateOrLoadAsset<AudioTuning>($"{TUNING_PATH}/AudioTuning.asset", tuning => {
+                tuning.masterVolume = 1f;
+                tuning.musicVolume = 0.7f;
+                tuning.sfxVolume = 1f;
+                tuning.uiVolume = 0.8f;
+                tuning.bikeEnginePitchBase = 0.8f;
+                tuning.bikeEnginePitchMax = 1.5f;
+                tuning.horseGallopPitchBase = 0.9f;
+                tuning.horseGallopPitchMax = 1.3f;
+                tuning.windSoundStartSpeed = 10f;
+                tuning.windSoundMaxSpeed = 30f;
+                tuning.windSoundMaxVolume = 0.5f;
+                tuning.ambientVolume = 0.3f;
+                tuning.musicCrossfadeTime = 2f;
+            });
         }
 
         private static T CreateOrLoadAsset<T>(string path, System.Action<T> configure) where T : ScriptableObject
@@ -467,6 +485,14 @@ namespace EdgeAbyss.Editor
             // Boot Manager
             var bootManager = new GameObject("BootManager");
             bootManager.AddComponent<BootManager>();
+
+            // Audio Manager (persists across scenes)
+            var audioManagerObj = new GameObject("AudioManager");
+            var audioManager = audioManagerObj.AddComponent<AudioManager>();
+            var amSO = new SerializedObject(audioManager);
+            var tuningProp = amSO.FindProperty("tuning");
+            if (tuningProp != null) tuningProp.objectReferenceValue = s_audioTuning;
+            amSO.ApplyModifiedPropertiesWithoutUndo();
 
             // Loading text
             var canvas = new GameObject("Canvas");

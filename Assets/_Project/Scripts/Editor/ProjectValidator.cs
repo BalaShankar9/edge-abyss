@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using EdgeAbyss.Gameplay.Riders;
 using EdgeAbyss.Gameplay.Score;
+using EdgeAbyss.Audio;
 using EdgeAbyss.Input;
 
 namespace EdgeAbyss.Editor
@@ -96,6 +97,7 @@ namespace EdgeAbyss.Editor
             CheckAsset<ScoreTuning>("Assets/_Project/Tuning/ScoreTuning.asset", "Score Tuning");
             CheckAsset<CameraTuning>("Assets/_Project/Tuning/CameraTuning.asset", "Camera Tuning");
             CheckAsset<WindTuning>("Assets/_Project/Tuning/WindTuning.asset", "Wind Tuning");
+            CheckAsset<AudioTuning>("Assets/_Project/Tuning/AudioTuning.asset", "Audio Tuning");
 
             _report.AppendLine();
         }
