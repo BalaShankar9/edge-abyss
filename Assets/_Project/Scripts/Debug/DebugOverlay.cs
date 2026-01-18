@@ -98,7 +98,7 @@ namespace EdgeAbyss.Debug
                 GUILayout.Label($"Speed: {rider.Speed:F2} m/s", _labelStyle);
                 GUILayout.Label($"Stability: {rider.Stability:F3}", _labelStyle);
                 GUILayout.Label($"Is Grounded: {rider.IsGrounded}", _labelStyle);
-                GUILayout.Label($"Is Falling: {rider.IsFalling}", _labelStyle);
+                GUILayout.Label($"Has Fallen: {rider.HasFallen}", _labelStyle);
 
                 if (rider is MonoBehaviour mb)
                 {
