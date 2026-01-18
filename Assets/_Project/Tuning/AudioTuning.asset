@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0f7b595eaca4ec887d6f561b86e476, type: 3}
+  m_Name: AudioTuning
+  m_EditorClassIdentifier: EdgeAbyss.Runtime::EdgeAbyss.Audio.AudioTuning
+  masterVolume: 1
+  musicVolume: 0.7
+  sfxVolume: 1
+  uiVolume: 0.8
+  bikeEnginePitchBase: 0.8
+  bikeEnginePitchMax: 1.5
+  horseGallopPitchBase: 0.9
+  horseGallopPitchMax: 1.3
+  windSoundStartSpeed: 10
+  windSoundMaxSpeed: 30
+  windSoundMaxVolume: 0.5
+  impactSoundMinVelocity: 2
+  impactVolumeMultiplier: 0.1
+  buttonHoverPitchVariation: 1.05
+  buttonClickPitch: 1
+  ambientVolume: 0.3
+  musicCrossfadeTime: 2

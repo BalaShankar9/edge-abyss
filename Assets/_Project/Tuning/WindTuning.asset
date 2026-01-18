@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cefb04f73684f55bb2b16c982b8e3e, type: 3}
+  m_Name: WindTuning
+  m_EditorClassIdentifier: EdgeAbyss.Runtime::EdgeAbyss.Gameplay.Environment.WindTuning
+  enableAmbientWind: 1
+  baseWindDirection: {x: 1, y: 0, z: 0}
+  baseWindIntensity: 1.5
+  directionVariance: 15
+  varianceSpeed: 0.3
+  enableGusts: 1
+  gustInterval: 8
+  gustIntervalVariance: 3
+  gustDuration: 1.5
+  gustIntensityMultiplier: 2
+  lateralForceMultiplier: 0.8
+  stabilityImpactPerIntensity: 0.015
+  effectSmoothSpeed: 4
+  defaultPulseFrequency: 0.5
+  defaultZoneIntensity: 4
+  strongWindThreshold: 5

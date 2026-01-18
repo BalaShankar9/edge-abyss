@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6124217e9430449c49e1390b19bee392, type: 3}
+  m_Name: CameraTuning
+  m_EditorClassIdentifier: EdgeAbyss.Runtime::EdgeAbyss.Gameplay.Camera.CameraTuning
+  baseFOV: 75
+  maxSpeedFOVBoost: 12
+  fovLerpSpeed: 4
+  referenceMaxSpeed: 35
+  maxRollAngle: 6
+  rollLerpSpeed: 5
+  rollMultiplier: 0.7
+  speedShakeIntensity: 0.015
+  speedShakeMaxSpeed: 30
+  speedShakeFrequency: 15
+  roughnessShakeIntensity: 0.03
+  roughnessShakeFrequency: 25
+  windShakeIntensity: 0.01
+  windShakeFrequency: 8
+  headBobAmplitude: 0.005
+  headBobFrequency: 3
+  headSwayAmplitude: 0.002
+  positionFollowSpeed: 20
+  rotationFollowSpeed: 15
+  maxShakeOffset: 0.08
+  maxShakeRotation: 1.5

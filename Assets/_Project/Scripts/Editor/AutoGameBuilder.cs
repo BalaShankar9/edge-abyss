@@ -23,6 +23,12 @@ namespace EdgeAbyss.Editor
 
         private static void CheckAndBuild()
         {
+            // Don't run during play mode
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                return;
+            }
+
             // Check if essential assets exist
             bool scenesExist = File.Exists($"{SCENES_PATH}/TestTrack.unity");
             bool tuningExists = File.Exists($"{TUNING_PATH}/RiderTuning_Bike.asset");
@@ -54,6 +60,13 @@ namespace EdgeAbyss.Editor
         [MenuItem("EdgeAbyss/Force Rebuild (No Confirm)", false, 10)]
         public static void BuildGameSilent()
         {
+            // Cannot build during play mode
+            if (EditorApplication.isPlaying)
+            {
+                Debug.LogWarning("[EdgeAbyss] Cannot build during play mode. Exit play mode first.");
+                return;
+            }
+
             Debug.Log("[EdgeAbyss] Starting silent build...");
 
             EditorUtility.DisplayProgressBar("Building EdgeAbyss", "Creating directories...", 0.05f);
