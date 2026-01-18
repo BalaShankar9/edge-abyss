@@ -131,7 +131,7 @@ namespace EdgeAbyss.Editor
             }
         }
 
-        private static void CreateDirectories()
+        internal static void CreateDirectories()
         {
             string[] folders = {
                 "Assets/_Project",
@@ -161,7 +161,7 @@ namespace EdgeAbyss.Editor
             }
         }
 
-        private static void CreateTuningAssets()
+        internal static void CreateTuningAssets()
         {
             s_bikeTuning = CreateOrLoadAsset<RiderTuning>($"{TUNING_PATH}/RiderTuning_Bike.asset", tuning => {
                 tuning.riderName = "Bike";
@@ -301,7 +301,7 @@ namespace EdgeAbyss.Editor
             return asset;
         }
 
-        private static void CreateMaterials()
+        internal static void CreateMaterials()
         {
             CreateMaterial($"{MATERIALS_PATH}/Track.mat", new Color(0.25f, 0.25f, 0.3f));
             CreateMaterial($"{MATERIALS_PATH}/Wall.mat", new Color(0.5f, 0.2f, 0.2f));
@@ -322,7 +322,7 @@ namespace EdgeAbyss.Editor
             return mat;
         }
 
-        private static void CreatePrefabs()
+        internal static void CreatePrefabs()
         {
             s_bikePrefab = CreateBikeRiderPrefab();
             s_horsePrefab = CreateHorseRiderPrefab();
@@ -467,7 +467,7 @@ namespace EdgeAbyss.Editor
             return prefab;
         }
 
-        private static void CreateBootScene()
+        internal static void CreateBootScene()
         {
             string scenePath = $"{SCENES_PATH}/Boot.unity";
             if (File.Exists(scenePath)) return;
@@ -518,7 +518,7 @@ namespace EdgeAbyss.Editor
             EditorSceneManager.SaveScene(scene, scenePath);
         }
 
-        private static void CreateMainMenuScene()
+        internal static void CreateMainMenuScene()
         {
             string scenePath = $"{SCENES_PATH}/MainMenu.unity";
             if (File.Exists(scenePath)) return;
@@ -642,7 +642,7 @@ namespace EdgeAbyss.Editor
             tmp.color = Color.white;
         }
 
-        private static void CreateTestTrackScene()
+        internal static void CreateTestTrackScene()
         {
             string scenePath = $"{SCENES_PATH}/TestTrack.unity";
             if (File.Exists(scenePath)) return;
@@ -942,7 +942,7 @@ namespace EdgeAbyss.Editor
             canvas.tag = "PauseMenu";
         }
 
-        private static void ConfigureBuildSettings()
+        internal static void ConfigureBuildSettings()
         {
             var scenes = new EditorBuildSettingsScene[]
             {
