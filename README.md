@@ -1,3 +1,9 @@
+![EdgeAbyss — Balance speed against the edge.](.github/showcase/banner.svg)
+
+**[Project guide](docs/SHOWCASE.md)** · [Source](https://github.com/BalaShankar9/edge-abyss) · [Issues](https://github.com/BalaShankar9/edge-abyss/issues) · [Bala's work](https://github.com/BalaShankar9)
+
+> **Current stage:** Unity prototype · playable release pending. [See the evidence and next release checklist](docs/SHOWCASE.md).
+
 # EdgeAbyss
 
 **A tense, smooth, and addictive edge-riding game where you balance on the precipice of disaster.**
